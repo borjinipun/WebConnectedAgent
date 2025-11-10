@@ -1,3 +1,6 @@
 groq
-dotenv
-pydantic_ai
+openai
+docling
+pydantic
+python-dotenv
+transformers
