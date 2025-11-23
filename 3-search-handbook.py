@@ -4,11 +4,13 @@ from pathlib import Path
 from typing import List
 from groq import Groq
 from pydantic import BaseModel, Field
+from dotenv import load_dotenv
 
+
+load_dotenv()
 # Ensure GROQ_API_KEY is set in your environment
 client = Groq(
-   # api_key=os.getenv('GROQ_API_KEY')
-   )
+    api_key=os.getenv('GROQ_API_KEY'),)
 
 # Use a standard, high-performing Groq model
 MODEL = "llama-3.3-70b-versatile"

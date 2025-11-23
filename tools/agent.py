@@ -2,7 +2,7 @@ import json
 import os
 from typing import List
 from groq import Groq
-from openai import OpenAI
+#from openai import OpenAI
 
 from dotenv import load_dotenv
 

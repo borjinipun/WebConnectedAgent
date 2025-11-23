@@ -1,5 +1,9 @@
 import json
 import os
+from dotenv import load_dotenv
+
+
+load_dotenv()
 
 #from openai import OpenAI
 from groq import Groq
@@ -16,7 +20,7 @@ from tools import (
 MODEL = "llama-3.3-70b-versatile"
 #client = OpenAI()
 client = Groq(
-    api_key=os.getenv('GROQ_API_KEY'))
+    api_key=os.getenv('GROQ_API_KEY'),)
 
 SYSTEM_PROMPT = """You are a research assistant for Dutch government organizations. You can help answer questions by:
 1. Searching the AI implementation handbook (for policy questions)

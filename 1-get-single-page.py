@@ -4,11 +4,13 @@ from docling.document_converter import DocumentConverter
 from groq import Groq
 from pydantic import BaseModel, HttpUrl
 from typing import Literal # Needed for the structured output type
+from dotenv import load_dotenv
 
+
+load_dotenv()
 # Ensure the GROQ_API_KEY is set in your environment
 client = Groq(
-    #api_key=os.getenv('GROQ_API_KEY')
-)
+    api_key=os.getenv('GROQ_API_KEY'),)
 converter = DocumentConverter()
 
 # Using the correct, recommended model for Groq API

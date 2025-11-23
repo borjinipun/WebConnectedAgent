@@ -3,11 +3,15 @@ import json
 from typing import List, Literal
 from groq import Groq
 from pydantic import BaseModel
+
+from dotenv import load_dotenv
+
+
+load_dotenv()
 #print(os.getenv('GROQ_API_KEY'))
 # Initialize the Groq client
 client = Groq(
-    #api_key=os.getenv('GROQ_API_KEY')
-)
+    api_key=os.getenv('GROQ_API_KEY'),)
 # Using a commonly available Llama 3 model for Groq
 MODEL = "llama-3.3-70b-versatile"
 # --------------------------------------------------------------
